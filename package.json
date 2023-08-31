@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.1",
+  "description": "cola",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^19.0.0",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.4"
+  }
+}

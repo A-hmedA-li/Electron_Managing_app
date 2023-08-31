@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+   
+    <title>Add Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+  <style>
+        body{
+            margin: 8px;
+        }
+        input{
+            margin:5px 10px;
+        }
+        #name{
+            margin:5px 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id = "CollectionState"> مجموعة جديدة</h1>
+    <div class="spinner-border" role="status" id ='spinner' > <span class="sr-only"></span> </div>
+    <div id ='displayKeys' style="visibility: hidden;">
+    <select  id ='selectCollection' onchange="loadColllection(this)">
+        <option value="nothing">اختر مجموعة</option>
+    </select>
+    <button class="btn btn-primary" onclick="addLines(this)"> ضيف سطر</button>
+    <button class="btn btn-dark" onclick="updateKeys()"> ارسل</button>
+    </div>
+
+    <div id="clear">
+        <label for="chouse"> مجموعة موجودة؟</label>
+        <input type="checkbox" id="check" name="chouse" onchange="changeState(this)" value="on"/>
+        <br>
+        <button onclick="addLine()" class="btn btn-primary">ضيف سطر</button>
+        <br>
+        <button onclick="send()" class="btn btn-dark" id="invs">ارسل</button> 
+    </div>
+ 
+    <form id="scalform">      
+        <label for="name">اسم المجموعة</label>
+        <input type="text" id="name" required >
+        
+    </form>
+    
+
+    <div class="container" id="con"></div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="pop" style="visibility:  hidden;">
+    طالع فقاعة
+    </button>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">شو الوضع؟</h5>
+                </div>
+                <div class="modal-body" >
+                    <p id="modal-body"> </p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="notok()" >مو تمام </button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="ok()">تمام</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="form2.js"></script>
+    <script src="otherstate.js"></script>
+    <!-- <script src="existing.js"></script> -->
+    <!-- <script src="form.js"></script> -->
+
+</body>
+</html>

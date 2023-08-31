@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <title>Cards</title>
+    <style>
+          .cardch{
+            padding: 8px 10px; 
+            background-color: #112B3C;
+            margin: 5px;
+            border-radius: 3px;
+            width: 10%; 
+            border: 1px solid black;
+        }
+        .card{
+            margin:5px ; 
+            width: 200px;
+            border-radius: 1px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 20px;
+        }
+        .background{
+            background-color:#383838 ;
+            color: white;
+        }
+        .nave{
+         
+            color: #161616;
+            background-color: yellowgreen;
+            padding: 10px;
+      
+
+        }
+        .btn{
+            
+            background-color: #F2F2F2;
+            margin: 2px;
+           
+        }
+        input{
+            margin: 5px;
+        }
+        .move {
+            cursor: move;
+        }
+        .trash{
+            display: none; 
+            color: white; 
+            padding: 20px 100px;
+            background-color: brown;
+        }
+        .snippet{
+            margin: 10px;
+        }
+        .labelText {
+            margin-left: 5px;
+            color: white;
+            padding:  3px 10px;
+            border: 1px solid white;
+        }
+        .remove{
+            background-color: #112B3C;
+        }
+        .snap{
+            height: 300px; 
+            width: 100%;
+            background-color: #EFEFEF;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="spinner-border" role="status" id ='spinner'> <span class="sr-only"></span> </div>
+   
+    <script src="loadCards.js"></script>
+    <script src="loadSingleView.js"></script>
+    <script src ="changeCard.js"></script>
+
+   
+</body>
+</html>
